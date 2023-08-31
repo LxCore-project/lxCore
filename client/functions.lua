@@ -28,7 +28,7 @@ function lxCore.Notifyox(text, notifyType, duration, subTitle, notifyPosition, n
         title = text
         description = subTitle
     end
-    local position = notifyPosition or QBConfig.NotifyPosition
+    local position = notifyPosition or Config.NotifyPosition
 
     lib.notify({
         id = title,
