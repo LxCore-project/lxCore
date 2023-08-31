@@ -1,5 +1,7 @@
 LxCore = {}
 
+-- @param type string Type of identifier to get ('steam:', 'license:', 'discord:', etc.)
+-- @param player id
 function LxCore.GetPlayerIdentifier(type, player)
     local id = GetNumPlayerIdentifiers(player)
     for count = 0, id do
