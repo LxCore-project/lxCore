@@ -20,7 +20,7 @@ end
 
 CreateThread(function()
     while true do
-        Citizen.Wait(5000) -- Wait 5 sec
+        Wait(5000) -- Wait 5 sec
         
         local resourceStates = {
             es_extended = GetResourceState('es_extended'),
