@@ -17,3 +17,20 @@ function LoadCharacterData(source)
 
   end
 end
+
+CreateThread(function()
+    while true do
+        Citizen.Wait(5000) -- Wait 5 sec
+        
+        local resourceStates = {
+            es_extended = GetResourceState('es_extended'),
+            qb_core = GetResourceState('qb-core')
+        }
+        
+        for resourceName, state in pairs(resourceStates) do
+            if state == 'started' then
+                print("Please use IxCore instead of " .. resourceName)
+            end
+        end
+    end
+end)
