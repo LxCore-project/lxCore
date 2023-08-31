@@ -5,7 +5,9 @@ exports('SharedObject', function()
 end)
 
 function lxCore.Notify(message)
-	-- yea i cant be bothered to do this either ill come back to it 
+    SetNotificationTextEntry("STRING")
+    AddTextComponentString(message)
+    DrawNotification(false, false)
 end
 
 exports('Notify', function(message)
