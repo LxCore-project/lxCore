@@ -10,7 +10,7 @@ function lxCore.Notify(message)
 	    AddTextComponentString(message)
 	    DrawNotification(false, false)
 	else
-		exports['lx_core']:Notify(message)
+		exports['lx_notify']:Notify(message)
 	end
 end
 
