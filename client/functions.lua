@@ -5,9 +5,13 @@ exports('SharedObject', function()
 end)
 -- @param message string The message to display
 function lxCore.Notify(message)
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString(message)
-    DrawNotification(false, false)
+	if GetResourceState('lx_notify') == 'missing' then
+	    SetNotificationTextEntry("STRING")
+	    AddTextComponentString(message)
+	    DrawNotification(false, false)
+	else
+		exports['lx_core']:Notify(message)
+	end
 end
 
 exports('Notify', function(message)
