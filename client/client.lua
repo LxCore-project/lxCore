@@ -1,4 +1,5 @@
-local accounttypes = {}
+local defaultCashAccount = Config.Accounts['cash'] 
+local defaultBankAccount = Config.Accounts['bank'] 
 
 
 RegisterNetEvent('lxcore:client:loaded')
